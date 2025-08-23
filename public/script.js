@@ -1,14 +1,6 @@
-// Mobile menu functionality
+// Mobile menu functionality - Bootstrap handles this automatically
 document.addEventListener('DOMContentLoaded', function() {
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-    const nav = document.querySelector('.nav');
-    
-    if (mobileMenuBtn && nav) {
-        mobileMenuBtn.addEventListener('click', function() {
-            nav.classList.toggle('mobile-nav-open');
-            mobileMenuBtn.classList.toggle('menu-open');
-        });
-    }
+    // Bootstrap navbar toggle functionality is handled automatically
 
     // Hero slider dots functionality
     const dots = document.querySelectorAll('.dot');
@@ -130,49 +122,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Add CSS for mobile navigation
+// Add header scroll transition
 const style = document.createElement('style');
 style.textContent = `
     .header {
         transition: transform 0.3s ease;
-    }
-    
-    @media (max-width: 767px) {
-        .nav {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: white;
-            border-top: 1px solid #e5e5e5;
-            padding: 1rem;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 1rem;
-            transform: translateY(-100%);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s ease;
-        }
-        
-        .nav.mobile-nav-open {
-            display: flex;
-            transform: translateY(0);
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        .mobile-menu-btn.menu-open span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        
-        .mobile-menu-btn.menu-open span:nth-child(2) {
-            opacity: 0;
-        }
-        
-        .mobile-menu-btn.menu-open span:nth-child(3) {
-            transform: rotate(-45deg) translate(7px, -6px);
-        }
     }
     
     .loaded {

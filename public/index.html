@@ -11,67 +11,79 @@
     <meta property="og:description" content="TCL is a leading global brand in TVs, air conditioners, and innovative technology solutions. Discover our latest products featuring Eileen Gu as our global brand ambassador.">
     <meta property="og:type" content="website">
     
-    <link rel="stylesheet" href="styles.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
+    <header class="header position-sticky top-0 bg-white border-bottom">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
                 <!-- Logo -->
-                <div class="logo">
+                <a class="navbar-brand" href="#">
                     <div class="tcl-logo">TCL</div>
-                </div>
+                </a>
+
+                <!-- Mobile menu button -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <!-- Navigation -->
-                <nav class="nav">
-                    <a href="#" class="nav-link">TV</a>
-                    <a href="#" class="nav-link">Air Conditioners</a>
-                    <a href="#" class="nav-link">Mobile</a>
-                    <a href="#" class="nav-link">Accessories</a>
-                </nav>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#">TV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#">Air Conditioners</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#">Mobile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-medium" href="#">Accessories</a>
+                        </li>
+                    </ul>
 
-                <!-- Right side actions -->
-                <div class="header-actions">
-                    <div class="header-nav">
-                        <a href="#" class="header-link">Support</a>
-                        <a href="#" class="header-link">About</a>
-                        <a href="#" class="header-link">Join Us</a>
+                    <!-- Right side actions -->
+                    <div class="d-flex align-items-center gap-3">
+                        <div class="d-none d-lg-flex gap-3">
+                            <a href="#" class="text-decoration-none text-muted small">Support</a>
+                            <a href="#" class="text-decoration-none text-muted small">About</a>
+                            <a href="#" class="text-decoration-none text-muted small">Join Us</a>
+                        </div>
+                        <button class="btn btn-link p-1" aria-label="Search">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </button>
+                        <button class="btn btn-link p-1" aria-label="User">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="icon-btn" aria-label="Search">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="11" cy="11" r="8"></circle>
-                            <path d="m21 21-4.35-4.35"></path>
-                        </svg>
-                    </button>
-                    <button class="icon-btn" aria-label="User">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="12" cy="7" r="4"></circle>
-                        </svg>
-                    </button>
-                    <button class="mobile-menu-btn" aria-label="Menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero min-vh-100 d-flex align-items-center position-relative">
         <div class="container">
-            <div class="hero-content">
+            <div class="row align-items-center g-5">
                 <!-- Left Content -->
-                <div class="hero-text">
+                <div class="col-lg-6">
                     <!-- Olympic Partnership Badge -->
-                    <div class="olympic-badge">
+                    <div class="d-flex align-items-center gap-3 mb-4">
                         <div class="tcl-logo-large">TCL</div>
-                        <div class="divider"></div>
-                        <div class="olympic-rings">
+                        <div class="divider d-none d-md-block"></div>
+                        <div class="olympic-rings d-flex align-items-center">
                             <div class="olympic-ring ring-blue"></div>
                             <div class="olympic-ring ring-yellow"></div>
                             <div class="olympic-ring ring-black"></div>
@@ -80,167 +92,187 @@
                         </div>
                     </div>
                     
-                    <div class="partnership-text">
+                    <div class="partnership-text mb-4">
                         Worldwide Olympic Partner
                     </div>
 
                     <!-- Main Heading -->
-                    <div class="hero-heading">
-                        <h2 class="hero-subtitle">The New Role of</h2>
-                        <h1 class="hero-title">Eileen Gu</h1>
-                        <div class="brand-ambassador">
+                    <div class="hero-heading mb-5">
+                        <h2 class="hero-subtitle mb-3">The New Role of</h2>
+                        <h1 class="hero-title mb-3">Eileen Gu</h1>
+                        <div class="brand-ambassador d-flex align-items-center gap-2">
                             <span class="tcl-brand">TCL</span>
                             <span class="ambassador-text">Global Brand Ambassador</span>
                         </div>
                     </div>
 
                     <!-- CTA -->
-                    <button class="cta-button">Learn More</button>
+                    <button class="btn cta-button">Learn More</button>
                 </div>
 
                 <!-- Right Image -->
-                <div class="hero-image">
-                    <img src="eileen-gu-hero.jpg" alt="Eileen Gu - TCL Global Brand Ambassador" class="hero-img">
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <img src="eileen-gu-hero.jpg" alt="Eileen Gu - TCL Global Brand Ambassador" class="hero-img img-fluid">
+                    </div>
                 </div>
             </div>
 
             <!-- Navigation Dots -->
-            <div class="hero-dots">
-                <div class="dot active"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+            <div class="hero-dots position-absolute bottom-0 start-50 translate-middle-x mb-4">
+                <div class="d-flex gap-3">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
             </div>
 
             <!-- Slide Counter -->
-            <div class="slide-counter">1/5</div>
+            <div class="slide-counter position-absolute bottom-0 end-0 mb-4 me-4">1/5</div>
         </div>
     </section>
 
     <!-- Product Showcase -->
-    <section class="products">
+    <section class="products py-5 bg-light">
         <div class="container">
             <!-- Section Header -->
-            <div class="section-header">
-                <h2 class="section-title">NEW ARRIVALS</h2>
-                <p class="section-subtitle">Discover our latest innovative products</p>
+            <div class="text-center mb-5">
+                <h2 class="section-title display-5 fw-bold mb-3">NEW ARRIVALS</h2>
+                <p class="section-subtitle fs-5 text-muted">Discover our latest innovative products</p>
             </div>
 
             <!-- Product Grid -->
-            <div class="product-grid">
-                <div class="product-card featured">
-                    <div class="product-image">
-                        <img src="tcl-products.jpg" alt="C845 Mini LED TV">
-                        <div class="featured-badge">Featured</div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">C845 Mini LED TV</h3>
-                        <p class="product-description">Experience the future of entertainment</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="tcl-products.jpg" alt="C745 QLED TV">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">C745 QLED TV</h3>
-                        <p class="product-description">Experience the future of entertainment</p>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="product-card card h-100 border-0 shadow-sm">
+                        <div class="product-image position-relative overflow-hidden">
+                            <img src="tcl-products.jpg" alt="C845 Mini LED TV" class="card-img-top">
+                            <div class="featured-badge position-absolute top-0 start-0 m-3 bg-danger text-white px-3 py-1 rounded-pill small fw-medium">Featured</div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="product-title h5 fw-bold mb-2">C845 Mini LED TV</h3>
+                            <p class="product-description text-muted small">Experience the future of entertainment</p>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="tcl-products.jpg" alt="P745 4K HDR TV">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">P745 4K HDR TV</h3>
-                        <p class="product-description">Experience the future of entertainment</p>
-                    </div>
-                </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="tcl-products.jpg" alt="Air Conditioner">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Air Conditioner</h3>
-                        <p class="product-description">Experience the future of entertainment</p>
+                <div class="col-lg-2 col-md-6">
+                    <div class="product-card card h-100 border-0 shadow-sm">
+                        <div class="product-image overflow-hidden">
+                            <img src="tcl-products.jpg" alt="C745 QLED TV" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="product-title h6 fw-bold mb-2">C745 QLED TV</h3>
+                            <p class="product-description text-muted small">Experience the future of entertainment</p>
+                        </div>
                     </div>
                 </div>
-                <div class="product-card">
-                    <div class="product-image">
-                        <img src="tcl-products.jpg" alt="Sound Bar">
+                <div class="col-lg-2 col-md-6">
+                    <div class="product-card card h-100 border-0 shadow-sm">
+                        <div class="product-image overflow-hidden">
+                            <img src="tcl-products.jpg" alt="P745 4K HDR TV" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="product-title h6 fw-bold mb-2">P745 4K HDR TV</h3>
+                            <p class="product-description text-muted small">Experience the future of entertainment</p>
+                        </div>
                     </div>
-                    <div class="product-info">
-                        <h3 class="product-title">Sound Bar</h3>
-                        <p class="product-description">Experience the future of entertainment</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="product-card card h-100 border-0 shadow-sm">
+                        <div class="product-image overflow-hidden">
+                            <img src="tcl-products.jpg" alt="Air Conditioner" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="product-title h6 fw-bold mb-2">Air Conditioner</h3>
+                            <p class="product-description text-muted small">Experience the future of entertainment</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <div class="product-card card h-100 border-0 shadow-sm">
+                        <div class="product-image overflow-hidden">
+                            <img src="tcl-products.jpg" alt="Sound Bar" class="card-img-top">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="product-title h6 fw-bold mb-2">Sound Bar</h3>
+                            <p class="product-description text-muted small">Experience the future of entertainment</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!-- View All Button -->
-            <div class="view-all">
-                <button class="view-all-btn">View All Products →</button>
+            <div class="text-center mt-5">
+                <button class="btn btn-link text-danger fs-5 fw-medium text-decoration-none view-all-btn">View All Products →</button>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer bg-white border-top">
         <div class="container">
-            <div class="footer-content">
-                <!-- Brand -->
-                <div class="footer-section">
-                    <div class="tcl-logo-footer">TCL</div>
-                    <p class="footer-description">
-                        Creating meaningful experiences through innovative technology and design.
-                    </p>
-                </div>
-
-                <!-- Products -->
-                <div class="footer-section">
-                    <h4 class="footer-title">Products</h4>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">TVs</a>
-                        <a href="#" class="footer-link">Air Conditioners</a>
-                        <a href="#" class="footer-link">Mobile</a>
-                        <a href="#" class="footer-link">Accessories</a>
+            <div class="footer-content py-5">
+                <div class="row g-4">
+                    <!-- Brand -->
+                    <div class="col-lg-3 col-md-6">
+                        <div class="tcl-logo-footer text-danger fw-bold fs-2">TCL</div>
+                        <p class="footer-description text-muted lh-base">
+                            Creating meaningful experiences through innovative technology and design.
+                        </p>
                     </div>
-                </div>
 
-                <!-- Support -->
-                <div class="footer-section">
-                    <h4 class="footer-title">Support</h4>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">Customer Service</a>
-                        <a href="#" class="footer-link">Warranty</a>
-                        <a href="#" class="footer-link">Downloads</a>
-                        <a href="#" class="footer-link">Contact Us</a>
+                    <!-- Products -->
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="footer-title fs-5 fw-bold text-dark mb-3">Products</h4>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="#" class="footer-link text-muted text-decoration-none">TVs</a>
+                            <a href="#" class="footer-link text-muted text-decoration-none">Air Conditioners</a>
+                            <a href="#" class="footer-link text-muted text-decoration-none">Mobile</a>
+                            <a href="#" class="footer-link text-muted text-decoration-none">Accessories</a>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Company -->
-                <div class="footer-section">
-                    <h4 class="footer-title">Company</h4>
-                    <div class="footer-links">
-                        <a href="#" class="footer-link">About TCL</a>
-                        <a href="#" class="footer-link">Careers</a>
-                        <a href="#" class="footer-link">News</a>
-                        <a href="#" class="footer-link">Investors</a>
+                    <!-- Support -->
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="footer-title fs-5 fw-bold text-dark mb-3">Support</h4>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="#" class="footer-link text-muted text-decoration-none">Customer Service</a>
+                            <a href="#" class="footer-link text-muted text-decoration-none">Warranty</a>
+                            <a href="#" class="footer-link text-muted text-decoration-none">Downloads</a>
+                            <a href="#" class="footer-link text-muted text-decoration-none">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Company -->
+                    <div class="col-lg-3 col-md-6">
+                        <h4 class="footer-title fs-5 fw-bold text-dark mb-3">Company</h4>
+                        <div class="d-flex flex-column gap-2">
+                            <a href="#" class="footer-link text-muted text-decoration-none">About TCL</a>
+                            <a href="#" class="footer-link text-muted text-decoration-none">Careers</a>
+                            <a href="#" class="footer-link text-muted text-decoration-none">News</a>
+                            <a href="#" class="footer-link text-muted text-decoration-none">Investors</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="footer-bottom">
-                <p class="copyright">© 2024 TCL. All rights reserved.</p>
-                <div class="footer-bottom-links">
-                    <a href="#" class="footer-bottom-link">Privacy Policy</a>
-                    <a href="#" class="footer-bottom-link">Terms of Service</a>
-                    <a href="#" class="footer-bottom-link">Cookies</a>
+            <div class="footer-bottom border-top py-4">
+                <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between align-items-center gap-3">
+                    <p class="copyright text-muted small mb-0">© 2024 TCL. All rights reserved.</p>
+                    <div class="d-flex gap-4">
+                        <a href="#" class="footer-bottom-link text-muted text-decoration-none small">Privacy Policy</a>
+                        <a href="#" class="footer-bottom-link text-muted text-decoration-none small">Terms of Service</a>
+                        <a href="#" class="footer-bottom-link text-muted text-decoration-none small">Cookies</a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
