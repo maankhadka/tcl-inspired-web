@@ -52,6 +52,18 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				// TCL Brand Colors
+				tcl: {
+					red: 'hsl(var(--tcl-red))',
+					text: 'hsl(var(--tcl-text))',
+					'text-secondary': 'hsl(var(--tcl-text-secondary))',
+				},
+				olympic: {
+					blue: 'hsl(var(--olympic-blue))',
+					yellow: 'hsl(var(--olympic-yellow))',
+					green: 'hsl(var(--olympic-green))',
+					black: 'hsl(var(--olympic-black))',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
